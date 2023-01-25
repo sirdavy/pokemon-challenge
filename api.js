@@ -1,5 +1,5 @@
 const fetchPokemon = (myPokemon) => {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${myPokemon}`)
+ return fetch(`https://pokeapi.co/api/v2/pokemon/${myPokemon}`)
     .then((response) => response.json())
     .then((data) => {
     let newPokemon = {
@@ -11,7 +11,7 @@ const fetchPokemon = (myPokemon) => {
           return element.type.name;
       })  
     };
-      console.log(newPokemon)
+      return newPokemon
     })
   }
 
